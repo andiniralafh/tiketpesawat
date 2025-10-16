@@ -1,0 +1,282 @@
+/* ======== STYLE HALAMAN PESAN TIKET ======== */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========== HEADER ========== */
+.header-top {
+    background-color: #4a90e2;
+    color: white;
+    padding: 8px 0;
+}
+
+.header-top a {
+    color: white;
+    font-weight: 500;
+}
+
+.header-social a {
+    color: white;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.main-menu {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    padding: 10px 0;
+}
+
+.nav-menu li a {
+    color: #333;
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+.nav-menu li a:hover {
+    color: #4a90e2;
+}
+
+/* ========== BANNER ========== */
+.about-banner {
+    background-color: #4a90e2;
+    text-align: center;
+    padding: 100px 0 60px;
+    color: white;
+}
+
+.about-banner h1 {
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.about-banner p a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* ========== FORM AREA ========== */
+.hot-deal-area {
+    padding: 60px 0;
+}
+
+.hot-deal-area h1 {
+    font-weight: 700;
+    color: #222;
+}
+
+.hot-deal-area p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+form {
+    background-color: #fff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+form .form-label {
+    font-weight: 600;
+    color: #444;
+}
+
+form .form-control,
+form .form-select {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+form .form-control:focus,
+form .form-select:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74,144,226,0.3);
+}
+
+/* ========== BUTTON ========== */
+.btn-primary {
+    background-color: #4a90e2;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #3c7cc4;
+}
+
+.btn-secondary.btn-sm {
+    background-color: #6c757d;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    padding: 6px 12px;
+    transition: 0.3s;
+}
+
+.btn-secondary.btn-sm:hover {
+    background-color: #5a6268;
+}
+
+/* ========== PAYMENT INFO BOX ========== */
+#payment-info {
+    border-radius: 8px;
+    background-color: #e9f5ff;
+    border: 1px solid #bcdffc;
+    padding: 15px;
+    color: #0c5460;
+}
+
+#payment-info h5 {
+    font-weight: 700;
+    margin-top: 0;
+}
+
+/* ========== STATUS BADGE ========== */
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 90px;
+}
+
+.status-aktif {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.status-batal {
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+.status-proses {
+    background-color: #fff3cd;
+    color: #664d03;
+}
+
+/* ========== TABLE & ACTION ========== */
+.aksi-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.aksi-btn form {
+    margin: 0;
+}
+
+.table th,
+.table td {
+    vertical-align: middle !important;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .about-banner {
+        padding: 80px 0 50px;
+    }
+
+    .about-banner h1 {
+        font-size: 28px;
+    }
+
+    form {
+        padding: 25px;
+    }
+}
+
+
+/*PRINT*/
+body {
+    background-color: #fdfdfd;
+    /* Warna latar belakang */
+    padding: 30px;
+    /* Jarak isi dari tepi halaman */
+    font-family: Arial, sans-serif;
+    /* Jenis huruf */
+}
+
+.ticket-box {
+    border: 2px solid #007bff;
+    /* Garis pinggir biru */
+    border-radius: 10px;
+    /* Sudut melengkung */
+    padding: 25px;
+    /* Jarak isi dalam kotak */
+    background: #fff;
+    /* Warna latar putih */
+    max-width: 750px;
+    /* Lebar maksimal kotak */
+    margin: auto;
+    /* Membuat kotak di tengah */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    /* Efek bayangan halus */
+}
+
+.header {
+    text-align: right;
+    /* Teks rata kanan */
+    color: #007bff;
+    /* Warna teks biru */
+}
+
+.header h2 {
+    font-weight: bold;
+    /* Tulisan tebal */
+    margin-bottom: 5px;
+    /* Jarak bawah sedikit */
+}
+
+.header p {
+    margin: 0;
+    /* Hilangkan jarak atas bawah */
+    font-weight: 600;
+    /* Tebal sedang */
+}
+
+.info-box {
+    border: 1px solid #ddd;
+    /* Garis abu-abu muda */
+    padding: 15px;
+    /* Jarak isi dalam kotak */
+    margin-top: 15px;
+    /* Jarak atas antar kotak */
+    border-radius: 8px;
+    /* Sudut melengkung */
+    background-color: #fafafa;
+    /* Warna latar abu muda */
+}
+
+.note {
+    font-size: 12px;
+    /* Ukuran teks kecil */
+    color: #555;
+    /* Warna abu-abu */
+}
+
+@media print {
+    .btn-print {
+        display: none;
+        /* Menyembunyikan tombol saat halaman dicetak */
+    }
+}
+
+/**/
