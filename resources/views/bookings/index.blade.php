@@ -62,6 +62,7 @@
 	                        <li><a href="{{ url('/') }}">Utama</a></li>
 	                        <li><a href="{{ url('about') }}">Tentang</a></li>
 	                        <li><a href="{{ url('contact') }}">Kontak</a></li>
+							<li><a href="{{ route('bookings.create') }}">Pesan Tiket</a></li>		
 	                    </ul>
 	                </nav><!-- #nav-menu-container -->
 	            </div>
@@ -164,21 +165,20 @@
 	                    <!-- Menampilkan total harga dengan format rupiah -->
 
 	                    {{-- STATUS --}}
-	                    <td>
-	                        @php
-	                        $status = strtolower($booking->status ?? 'aktif');
-	                        @endphp
-	                        <!-- Mengubah status jadi huruf kecil dan jika null maka default aktif -->
-	                        @if($status === 'aktif')
-	                        <span class="status-badge status-aktif">Aktif</span>
-	                        @elseif($status === 'batal')
-	                        <span class="status-badge status-batal">Batal</span>
-	                        @else
-	                        <span class="status-badge status-proses">Proses</span>
-	                        @endif
-	                    </td>
-	                    <!-- Menampilkan badge warna/status tiket -->
-
+						<td>
+							@php
+							$status = strtolower($booking->status ?? 'pending');
+							@endphp
+							<!-- Ubah status jadi lowercase dan kasih badge warna -->
+							@if($status === 'paid')
+								<span class="status-badge status-paid">Sudah Dibayar</span>
+							@elseif($status === 'cancelled')
+								<span class="status-badge status-cancelled">Dibatalkan</span>
+							@else
+								<span class="status-badge status-pending">Menunggu Pembayaran</span>
+							@endif
+						</td>
+						<!-- Menampilkan badge warna/status tiket -->
 	                    {{-- AKSI --}}
 	                    <td>
 	                        <div class="aksi-btn">

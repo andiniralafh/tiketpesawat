@@ -3,17 +3,23 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable; // biar bisa dipakai Auth
+use Illuminate\Notifications\Notifiable;
 
-class Register extends Model
+class Register extends Authenticatable
 {
-    use HasFactory;
+    use HasFactory, Notifiable;
 
-    protected $table = 'register'; // nama tabel di database
+    protected $table = 'registers'; // ✅ pakai registers
 
     protected $fillable = [
-        'nama',
+        'name',
         'email',
+        'password',
+        'role',
+    ];
+
+    protected $hidden = [
         'password',
     ];
 }

@@ -60,8 +60,10 @@
 				        <ul class="nav-menu">
 				          <li><a href="{{ url('/') }}">Utama</a></li>
                           <li><a href="{{ url('about') }}">Tentang</a></li>
-				          <li><a href="{{ route('bookings.create') }}">Pesan Tiket</a></li>		
-                          <li><a href="{{ route('bookings.index') }}">Daftar Tiket</a></li>			          					          		          
+				          <!-- <li><a href="{{ route('bookings.create') }}">Pesan Tiket</a></li>		
+                          <li><a href="{{ route('bookings.index') }}">Daftar Tiket</a></li>			    -->
+                          <a href="{{ route('loginForm') }}" class="btn btn-outline-primary mr-2">Login</a>
+                          <a href="{{ route('registerForm') }}" class="btn btn-primary">Register</a>
 				          <li><a href="{{ url('contact') }}">Kontak</a></li>
 				        </ul>
 				      </nav><!-- #nav-menu-container -->					      		  

@@ -57,6 +57,7 @@
                     <li><a href="{{ url('/') }}">Utama</a></li>
                     <li><a href="{{ url('/about') }}">Tentang</a></li>
                     <li><a href="{{ url('/contact') }}">Kontak</a></li>
+                    <li><a href="{{ route('data-tiket.index') }}">Data Tiket</a></li>
                     <li>
                         <a href="{{ route('flights.index') }}" 
                            class="btn btn-sm btn-outline-primary px-3 py-1"

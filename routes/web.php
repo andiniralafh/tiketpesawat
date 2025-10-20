@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FlightController;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\AuthRegisterController;
+use App\Http\Controllers\DataTiketController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,3 +47,22 @@ Route::resource('bookings', BookingController::class)->only([
 ]);
 
 Route::get('/bookings/print/{id}', [App\Http\Controllers\BookingController::class, 'print'])->name('bookings.print');
+
+// ==================== AUTH ====================
+// Register
+Route::get('/register', [AuthRegisterController::class, 'registerForm'])->name('registerForm');
+Route::post('/register', [AuthRegisterController::class, 'register'])->name('register');
+
+// Login
+Route::get('/login', [AuthRegisterController::class, 'loginForm'])->name('loginForm');
+Route::post('/login', [AuthRegisterController::class, 'login'])->name('login');
+
+// Data Tiket
+
+Route::prefix('data-tiket')->group(function () {
+    Route::get('/', [DataTiketController::class, 'index'])->name('data-tiket.index');
+    Route::get('/{id}/edit', [DataTiketController::class, 'edit'])->name('data-tiket.edit');
+    Route::put('/{id}', [DataTiketController::class, 'update'])->name('data-tiket.update');
+    Route::delete('/{id}', [DataTiketController::class, 'destroy'])->name('data-tiket.destroy');
+});
+
