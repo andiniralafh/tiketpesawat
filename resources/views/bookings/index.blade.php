@@ -107,7 +107,7 @@
 	        </form>
 
 	        <!-- Tombol untuk menuju halaman pemesanan tiket baru -->
-	        <a href="{{ url('pesantiket') }}" class="btn btn-primary mb-3">Pesan Tiket Baru</a>
+	        <a href="{{ route('bookings.create') }}" class="btn btn-primary mb-3">Pesan Tiket Baru</a>
 
 	        <!-- Tabel untuk menampilkan daftar tiket -->
 	        <table class="table table-bordered table-striped align-middle text-center">
@@ -208,6 +208,74 @@
 	            </tbody>
 	        </table>
 	    </div>
-	</body>
+<!-- start footer Area -->				
+        <footer class="footer-area section-gap" style="background:#111; color:#fff; padding:30px 0; font-size:14px;">
+            <div class="container">
+                <div class="row">
+                    <!-- Tentang Website -->
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h6 style="color:#fff; font-size:16px; margin-bottom:10px;">TiketPesawat</h6>
+                            <p style="color:#fff; margin-bottom:5px;">
+                                Pesan tiket pesawat domestik dengan mudah dan cepat.  
+                                Kami menyediakan penerbangan ke berbagai destinasi di Indonesia, dari Sabang sampai Merauke.
+                            </p>
+                        </div>
+                    </div>
 
+                    <!-- Navigasi -->
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h6 style="color:#fff; font-size:16px; margin-bottom:10px;">Navigasi</h6>
+                            <ul style="list-style:none; padding-left:0; margin-bottom:5px;">
+                                <li><a href="/" style="color:#fff; font-size:14px;">Beranda</a></li>
+                                <li><a href="/flights" style="color:#fff; font-size:14px;">Cari Penerbangan</a></li>
+                                <li><a href="/bookings" style="color:#fff; font-size:14px;">Pesanan Saya</a></li>
+                                <li><a href="/contact" style="color:#fff; font-size:14px;">Kontak</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Kontak -->
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h6 style="color:#fff; font-size:16px; margin-bottom:10px;">Hubungi Kami</h6>
+                            <p style="color:#fff; margin-bottom:5px;">Email: support@tiketpesawat.com</p>
+                            <p style="color:#fff; margin-bottom:5px;">Telepon: +62 812 3456 7890</p>
+                            <div class="footer-social" style="margin-top:5px;">
+                                <a href="#"><i class="fa fa-facebook" style="color:#fff; font-size:16px; margin-right:10px;"></i></a>
+                                <a href="#"><i class="fa fa-twitter" style="color:#fff; font-size:16px; margin-right:10px;"></i></a>
+                                <a href="#"><i class="fa fa-instagram" style="color:#fff; font-size:16px; margin-right:10px;"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="row footer-bottom d-flex justify-content-center mt-3">
+                    <p class="col-lg-12 footer-text m-0 text-center" style="color:#fff; font-size:14px;">
+                        &copy; <script>document.write(new Date().getFullYear());</script> TiketPesawat | Semua Hak Dilindungi
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <!-- End footer Area -->	
+
+
+
+			<script src="js/vendor/jquery-2.2.4.min.js"></script>
+			<script src="js/popper.min.js"></script>
+			<script src="js/vendor/bootstrap.min.js"></script>			
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>		
+ 			<script src="js/jquery-ui.js"></script>					
+  			<script src="js/easing.min.js"></script>			
+			<script src="js/hoverIntent.js"></script>
+			<script src="js/superfish.min.js"></script>	
+			<script src="js/jquery.ajaxchimp.min.js"></script>
+			<script src="js/jquery.magnific-popup.min.js"></script>						
+			<script src="js/jquery.nice-select.min.js"></script>					
+			<script src="js/owl.carousel.min.js"></script>							
+			<script src="js/mail-script.js"></script>	
+			<script src="js/main.js"></script>	
+		</body>
 	</html>
